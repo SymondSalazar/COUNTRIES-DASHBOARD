@@ -4,6 +4,7 @@ import paises from "./data/paises.json";
 import { Barra_Busqueda } from "./components/barra_busqueda.jsx";
 import { Dropdown_Region } from "./components/dropdown_region.jsx";
 import { Paises } from "./components/paises_lista.jsx";
+import { Titulo } from "./components/titulo.jsx";
 
 function App() {
   //Consegui todos los datos de los paises
@@ -30,17 +31,23 @@ function App() {
 
   return (
     <>
-      <div>
-        <aside>
-          <h1 className="text-3xl font-bold">Country Dashboard</h1>
-        </aside>
+      <div className="flex flex-col min-h-screen bg-[#fafafa] p-4 gap-6 font-sans text-black items-center">
+        
+      
+        <Titulo titulo="Dashboard de países" />
+        <main className="w-full md:w-3/4 lg:w-4/5 flex flex-col gap-10 items-center">
+        
+          <header className="flex flex-row gap-6 w-full max-w-2xl items-center">
+            <Barra_Busqueda busqueda={busqueda} setBusqueda={setBusqueda} />
+            <Dropdown_Region region={region} setRegion={setRegion} />
+          </header>
 
-        <header>
-          <Barra_Busqueda busqueda={busqueda} setBusqueda={setBusqueda} />
-          <Dropdown_Region region={region} setRegion={setRegion} />
-        </header>
+          <section className="w-full">
+            <Paises paises_mostrar={paises_filtrados} />
+          </section>
 
-        <Paises paises_mostrar={paises_filtrados} />
+        </main>
+        
       </div>
     </>
   );
