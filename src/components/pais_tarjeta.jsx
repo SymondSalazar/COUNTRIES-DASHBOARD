@@ -1,7 +1,7 @@
 export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
   return (
     <a
-      href={`/${nombre}`}
+      href={`/pais/${nombre}`}
       className="group relative block h-64 sm:h-80 lg:h-80 shadow-[4px_4px_0_0] shadow-black"
     >
       <span className="absolute inset-0 border-2 border-dashed border-black"></span>
