@@ -8,7 +8,7 @@
 
 - **Nombre:** [Symond Salazar]
 - **Email:** [symond.salazar.silva.2005@gmail.com]
-- **Fecha:** []
+- **Fecha:** [13/junio/2026]
 
 ---
 
@@ -18,8 +18,7 @@
 |----------------|-----|
 | Repositorio de GitHub | [https://github.com/SymondSalazar/COUNTRIES-DASHBOARD] |
 | Video de Loom | [https://www.loom.com/share/...] |
-| Demo en Vivo (si está desplegado) | [https://countries-dashboard-r11nnf85e-symond-salazar-s-projects.vercel.app/] |
-
+| Demo en Vivo (si está desplegado) | 
 ---
 
 ## Instrucciones de Configuración
@@ -82,20 +81,26 @@ npm start
 ## Capturas de Pantalla
 
 ### Página Principal / Lista de Países
-![Lista de Países](./screenshots/country-list.png)
-> Descripción: Breve descripción de lo que se muestra
+<img width="1920" height="1080" alt="screenshot-2026-06-13_18-43-44" src="https://github.com/user-attachments/assets/eae14b4b-6657-4829-a88e-6772930ca3b2" />
+
+> Descripción: Esta es la vista que se obtiene al abrir la aplicacion.
 
 ### Búsqueda en Acción
-![Búsqueda](./screenshots/search.png)
-> Descripción: Breve descripción de lo que se muestra
+<img width="1920" height="1080" alt="screenshot-2026-06-13_18-29-52" src="https://github.com/user-attachments/assets/ed4fadee-eb2b-4158-9e2d-b4c3f54dfa40" />
+> Descripción: Muestro la busqueda en tiempo real de los paises.
 
 ### Vista Detallada del País
-![Vista Detallada](./screenshots/detail.png)
-> Descripción: Breve descripción de lo que se muestra
+<img width="1920" height="1080" alt="screenshot-2026-06-13_18-44-43" src="https://github.com/user-attachments/assets/f914220c-f660-4e38-b018-eb36dc1e64f1" />
+
+> Descripción: En esta foto muetro la informacion en detalle de un pais.
 
 ### Estados de Carga / Error
-![Estados](./screenshots/states.png)
-> Descripción: Breve descripción de lo que se muestra
+<img width="1920" height="1080" alt="screenshot-2026-06-13_18-45-33" src="https://github.com/user-attachments/assets/f04a92b3-ee55-4968-ace4-7a5925713d99" />
+<img width="1920" height="1080" alt="screenshot-2026-06-13_18-46-28" src="https://github.com/user-attachments/assets/7e06a3f0-64f3-4390-8670-03212e9b266a" />
+<img width="1920" height="1080" alt="screenshot-2026-06-13_18-47-08" src="https://github.com/user-attachments/assets/3fda06fd-9cfc-45ce-98b0-6ac6f1efa965" />
+
+> Descripción: El primer capture muestra la carga de datos, el segundo muestra cuando no se encuentra un pais y la tercera es un easter egg que pongo en mis proyectos para la pagina 404 Not Found
+
 
 ---
 
@@ -131,13 +136,13 @@ src/
 
 ## Desafíos Enfrentados
 
-### Desafío 1: [Buscar la api]
+### Desafío 1: Buscar la api
 **Problema:** En el repositorio de la prueba tecnica, indicaba que debia usar una api deprecada.
 
 **Solución:** En el mensaje daba un enlace indicando el problema, al acceder al enlace indicaba
 que la api ya no existia, ahora existe una nueva version donde tengo que generar una api key, entonces eso hice, la genere y la use con herramientas para hacer peticiones.
 
-### Desafío 2: [Usar la api]
+### Desafío 2: Usar la api
 **Problema:** Tenia un error de parte del cliente donde no me permitia usar la api, por un problema de Cors.
 
 **Solución:** Tanto en el entorno de desarrollo como en el despliegue cree un proxy.
