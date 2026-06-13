@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
-const END_POINT = "api/v5";
+const END_POINT = "api/v5?limit=100";
 
 export function useObtenerPaises({ setPaisesData, pais = null }) {
   let ROUTE = END_POINT;

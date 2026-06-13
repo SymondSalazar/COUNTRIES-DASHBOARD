@@ -6,9 +6,9 @@
 
 ## Información del Candidato
 
-- **Nombre:** [Tu Nombre Completo]
-- **Email:** [tu.email@ejemplo.com]
-- **Fecha:** [Fecha de Entrega]
+- **Nombre:** [Symond Salazar]
+- **Email:** [symond.salazar.silva.2005@gmail.com]
+- **Fecha:** []
 
 ---
 
@@ -16,7 +16,7 @@
 
 | Tipo de Enlace | URL |
 |----------------|-----|
-| Repositorio de GitHub | [https://github.com/usuario/repo] |
+| Repositorio de GitHub | [https://github.com/SymondSalazar/COUNTRIES-DASHBOARD] |
 | Video de Loom | [https://www.loom.com/share/...] |
 | Demo en Vivo (si está desplegado) | [https://tu-app.vercel.app] |
 
@@ -26,8 +26,8 @@
 
 ```bash
 # Clonar el repositorio
-git clone [url-de-tu-repo]
-cd [carpeta-del-proyecto]
+git clone [https://github.com/SymondSalazar/COUNTRIES-DASHBOARD.git]
+cd [COUNTRIES_DASHBOARD]
 
 # Instalar dependencias
 npm install
@@ -45,10 +45,10 @@ npm start
 
 ## Tecnologías Utilizadas
 
-- [ ] React (versión: ___)
-- [ ] Vite / Create React App
-- [ ] CSS / Tailwind / Styled Components / Otro: ___
-- [ ] Otras librerías: ___
+- [✅] React (versión: 19.2.6)
+- [✅] Vite 
+- [✅ ] Tailwind 
+- [✅] React router
 
 ---
 
@@ -58,24 +58,24 @@ npm start
 
 | Característica | Estado | Notas |
 |----------------|--------|-------|
-| Lista de Países | ✅ / ⏳ / ❌ | |
-| Funcionalidad de Búsqueda | ✅ / ⏳ / ❌ | |
-| Filtro por Región | ✅ / ⏳ / ❌ | |
-| Vista Detallada del País | ✅ / ⏳ / ❌ | |
-| Estados de Carga | ✅ / ⏳ / ❌ | |
-| Manejo de Errores | ✅ / ⏳ / ❌ | |
+| Lista de Países | ✅ | |
+| Funcionalidad de Búsqueda | ✅   | |
+| Filtro por Región | ✅  | |
+| Vista Detallada del País | ✅ / ⏳| |
+| Estados de Carga |  ❌ | |
+| Manejo de Errores | ⏳ |Muestra mensajes cuando no encuentra el pais|
 
 ### Características Extra
 
 | Característica | Estado | Notas |
 |----------------|--------|-------|
-| Diseño Responsivo | ✅ / ❌ | |
-| Modo Oscuro/Claro | ✅ / ❌ | |
-| Funcionalidad de Ordenamiento | ✅ / ❌ | |
-| Favoritos (localStorage) | ✅ / ❌ | |
-| TypeScript | ✅ / ❌ | |
-| Pruebas Unitarias | ✅ / ❌ | |
-| Despliegue en Vivo | ✅ / ❌ | |
+| Diseño Responsivo | ❌ | Algunos componentes si, otros no |
+| Modo Oscuro/Claro | ❌| |
+| Funcionalidad de Ordenamiento | ❌ | |
+| Favoritos (localStorage) |❌ | |
+| TypeScript |  ❌ | |
+| Pruebas Unitarias | ❌ | |
+| Despliegue en Vivo | ✅  | |
 
 ---
 

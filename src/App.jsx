@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import { Barra_Busqueda } from "./components/barra_busqueda.jsx";
-import { Dropdown_Region } from "./components/dropdown_region.jsx";
-import { Paises } from "./components/paises_lista.jsx";
-import { Titulo } from "./components/titulo.jsx";
+import { BarraBusqueda } from "./components/BarraBusqueda.jsx";
+import { Dropdown_Region } from "./components/DropdownRegion.jsx";
+import { Paises } from "./components/PaisesLista.jsx";
+import { Titulo } from "./components/Titulo.jsx";
 import { useObtenerPaises } from "./hook/useObtenerPaises.js";
 import { useFiltroPais } from "./hook/useFiltroPais.js";
 
@@ -20,7 +20,7 @@ function App() {
         <Titulo titulo="Dashboard de países" />
         <main className="w-full md:w-3/4 lg:w-4/5 flex flex-col gap-10 items-center">
           <header className="flex flex-row gap-6 w-full max-w-2xl items-center">
-            <Barra_Busqueda busqueda={busqueda} setBusqueda={setBusqueda} />
+            <BarraBusqueda busqueda={busqueda} setBusqueda={setBusqueda} />
             <Dropdown_Region region={region} setRegion={setRegion} />
           </header>
 

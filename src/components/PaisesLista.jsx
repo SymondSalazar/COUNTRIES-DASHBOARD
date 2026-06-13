@@ -1,4 +1,4 @@
-import { Pais_Tarjeta } from "./pais_tarjeta.jsx";
+import { Pais_Tarjeta } from "./PaisTarjeta.jsx";
 
 export function Vista_Paises({ paises_mostrar }) {
   return (

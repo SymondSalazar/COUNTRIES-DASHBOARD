@@ -1,11 +1,11 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import { Titulo } from "./components/titulo.jsx";
-import { Boton } from "./components/boton.jsx";
+import { Titulo } from "./components/Titulo.jsx";
+import { Boton } from "./components/Boton.jsx";
 import { useParams } from "react-router-dom";
 import { useObtenerPaises } from "./hook/useObtenerPaises.js";
-import { PanelPropiedades } from "./components/panel_propiedades.jsx";
-import { TAB_INFO } from "./components/tab_info.jsx";
+import { PanelPropiedades } from "./components/PanelPropiedades.jsx";
+import { TAB_INFO } from "./components/TabInfo.jsx";
 
 export function PaginaPais() {
   const { pais } = useParams();

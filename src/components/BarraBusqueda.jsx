@@ -1,4 +1,4 @@
-export function Barra_Busqueda({ busqueda, setBusqueda }) {
+export function BarraBusqueda({ busqueda, setBusqueda }) {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
       <input

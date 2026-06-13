@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Titulo } from "./components/titulo.jsx";
+import { Titulo } from "./components/Titulo.jsx";
 import "./App.css";
-import { Boton } from "./components/boton.jsx";
+import { Boton } from "./components/Boton.jsx";
 
 export function NotFound() {
   return (
