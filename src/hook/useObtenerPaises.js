@@ -20,7 +20,7 @@ export function useObtenerPaises({ setPaisesData, pais = null }) {
       .then((data) => {
         setPaisesData(data.data.objects);
       });
-  }, [pais,ROUTE]);
+  }, []);
 }
 
 export default useObtenerPaises;

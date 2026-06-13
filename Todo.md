@@ -1,1 +1,1 @@
-1.-Show: native name, languages, currencies, borders, subregion, top-level domain
+1.-Dar estilo a todo esto

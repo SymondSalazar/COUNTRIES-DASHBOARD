@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import "./App.css";
 import { Barra_Busqueda } from "./components/barra_busqueda.jsx";
 import { Dropdown_Region } from "./components/dropdown_region.jsx";
@@ -8,17 +8,12 @@ import { useObtenerPaises } from "./hook/useObtenerPaises.js";
 import { useFiltroPais } from "./hook/useFiltroPais.js";
 
 function App() {
-
   const [paises_data, setPaisesData] = useState([]);
   const [busqueda, setBusqueda] = useState("");
   const [region, setRegion] = useState("");
-  useObtenerPaises({setPaisesData});
-  const filtro = useFiltroPais({busqueda, region, paises_data});
+  useObtenerPaises({ setPaisesData });
+  const filtro = useFiltroPais({ busqueda, region, paises_data });
 
-  
-
-
- 
   return (
     <>
       <div className="flex flex-col min-h-screen bg-[#fafafa] p-4 gap-6 font-sans text-black items-center">
