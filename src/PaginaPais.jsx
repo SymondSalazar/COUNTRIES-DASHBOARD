@@ -6,18 +6,17 @@ import { useParams } from "react-router-dom";
 import { useObtenerPaises } from "./hook/useObtenerPaises.js";
 import { PanelPropiedades } from "./components/PanelPropiedades.jsx";
 import { TAB_INFO } from "./components/TabInfo.jsx";
+import { BarraCarga } from "./components/BarraCarga.jsx";
 
 export function PaginaPais() {
   const { pais } = useParams();
 
   const [pais_data, setPaisesData] = useState([]);
   const [activeTab, setTab] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [porcentaje, setPorcentaje] = useState(0);
 
-  useObtenerPaises({ setPaisesData, pais });
-
-  useEffect(() => {
-    console.log(pais_data);
-  }, [pais_data]);
+  useObtenerPaises({ setPaisesData, pais, setLoading, setPorcentaje });
 
   return (
     <>
@@ -25,13 +24,24 @@ export function PaginaPais() {
         <Titulo titulo={pais} />
 
         <main className="gap-0">
-          {pais_data.length > 0 ? (
+          {pais_data.length > 0 && (
+            <>
             <PanelPropiedades activeTab={activeTab} setTab={setTab}>
               <TAB_INFO activeTab={activeTab} pais_data={pais_data} />
             </PanelPropiedades>
-          ) : (
+            </>
+          )}
+
+          {loading && (
+            <div className="w-full flex justify-center items-center">
+              <BarraCarga porcentaje={porcentaje} />
+            </div>
+            )}
+
+          {pais_data.length === 0 && !loading && (
             <p>No se encontró información sobre este país</p>
           )}
+
         </main>
 
         <Boton texto="Volver" to="/" />

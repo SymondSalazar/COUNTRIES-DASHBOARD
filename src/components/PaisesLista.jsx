@@ -1,6 +1,5 @@
 import { Pais_Tarjeta } from "./PaisTarjeta.jsx";
-
-export function Vista_Paises({ paises_mostrar }) {
+export function Vista_Paises({ paises_mostrar}) {
   return (
     <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
       {paises_mostrar.map((pais) => (
@@ -44,10 +43,14 @@ export function Vista_Paises_Backup({ paises_mostrar }) {
   ));
 }
 
-export function Paises({ paises_mostrar }) {
-  if (paises_mostrar.length != 0) {
+export function Paises({ paises_mostrar, loading }) {
+  if (paises_mostrar.length != 0 && !loading) {
     return <Vista_Paises paises_mostrar={paises_mostrar} />;
-  } else {
+  } else if (loading) {
+    return; 
+  }
+   
+  else{
     return <p style={{ color: "red" }}>No se encontraron paises</p>;
   }
 }

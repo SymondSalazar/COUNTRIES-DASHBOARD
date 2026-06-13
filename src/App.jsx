@@ -6,12 +6,17 @@ import { Paises } from "./components/PaisesLista.jsx";
 import { Titulo } from "./components/Titulo.jsx";
 import { useObtenerPaises } from "./hook/useObtenerPaises.js";
 import { useFiltroPais } from "./hook/useFiltroPais.js";
+import { BarraCarga } from "./components/BarraCarga.jsx";
+import { Boton } from "./components/Boton.jsx";
 
 function App() {
   const [paises_data, setPaisesData] = useState([]);
   const [busqueda, setBusqueda] = useState("");
+  const [porcentaje, setPorcentaje] = useState(0);
   const [region, setRegion] = useState("");
-  useObtenerPaises({ setPaisesData });
+  const [loading, setLoading] = useState(true);
+
+  useObtenerPaises({ setPaisesData, pais: null, setLoading, setPorcentaje });
   const filtro = useFiltroPais({ busqueda, region, paises_data });
 
   return (
@@ -24,8 +29,14 @@ function App() {
             <Dropdown_Region region={region} setRegion={setRegion} />
           </header>
 
+          {
+            loading && (
+              <div className="w-full flex justify-center items-center">
+                <BarraCarga porcentaje={porcentaje} />
+              </div>)
+          }
           <section className="w-full">
-            <Paises paises_mostrar={filtro} />
+            <Paises paises_mostrar={filtro} loading={loading} />
           </section>
         </main>
       </div>
