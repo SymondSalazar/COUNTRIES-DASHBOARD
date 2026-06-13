@@ -1,7 +1,8 @@
+import {Link} from "react-router-dom";
 export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
   return (
-    <a
-      href={`/pais/${nombre}`}
+    <Link
+      to={`/pais/${nombre}`}
       className="group relative block h-64 sm:h-80 lg:h-80 shadow-[4px_4px_0_0] shadow-black"
     >
       <span className="absolute inset-0 border-2 border-dashed border-black"></span>
@@ -12,7 +13,7 @@ export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
             <img
               src={bandera}
               alt={`Bandera de ${nombre}`}
-              className="mb-4 h-20 w-auto object-contain"
+              className="mb-4 h-20 w-auto object-contain shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)]"
             />
           ) : null}
 
@@ -28,6 +29,6 @@ export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
           <p className="mt-2 text-sm sm:text-base">Region: {region}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
