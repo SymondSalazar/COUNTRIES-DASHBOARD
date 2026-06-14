@@ -68,7 +68,7 @@ npm start
 
 | Característica | Estado | Notas |
 |----------------|--------|-------|
-| Diseño Responsivo | ❌ | Algunos componentes si, otros no |
+| Diseño Responsivo | ✅  | |
 | Modo Oscuro/Claro | ❌| |
 | Funcionalidad de Ordenamiento | ❌ | |
 | Favoritos (localStorage) |❌ | |
