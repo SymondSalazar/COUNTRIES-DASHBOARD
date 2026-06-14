@@ -12,7 +12,7 @@ const TABS = [
 export function PanelPropiedades({ children, activeTab, setTab }) {
   return (
     <>
-      <div className="border-b-2 border-black">
+      <div className="border-b-2" style={{ borderColor: "var(--theme-border)" }}>
         <div className="-mb-0.5 flex">
           {/* 2. Iterate over the array to generate buttons dynamically */}
           {TABS.map((tabName, index) => {
@@ -26,10 +26,8 @@ export function PanelPropiedades({ children, activeTab, setTab }) {
                 aria-selected={isActive} // Accessibility: accurately reflects the state
                 onClick={() => setTab(index)} // 3. Update the state with this button's index
                 // 4. Conditionally apply the Tailwind classes based on the isActive variable
-                className={`px-6 py-2 font-semibold focus:ring-2 focus:ring-yellow-300 focus:outline-0 transition-colors ${
-                  isActive
-                    ? "border-2 border-black bg-yellow-200 text-black"
-                    : "border-2 border-transparent text-black hover:bg-black hover:text-white"
+                className={`border-2 px-6 py-2 font-semibold transition-colors focus:outline-0 focus:ring-2 focus:ring-yellow-300 ${
+                  isActive ? "theme-tab-active" : "theme-tab-inactive"
                 }`}
               >
                 {tabName}
@@ -39,7 +37,7 @@ export function PanelPropiedades({ children, activeTab, setTab }) {
         </div>
       </div>
 
-      <div className="-mt-0.5 border-2 border-black p-4 shadow-[4px_4px_0_0] shadow-black">
+      <div className="theme-field -mt-0.5 border-2 p-4">
         {children}
       </div>
     </>

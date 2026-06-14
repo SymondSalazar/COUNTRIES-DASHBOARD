@@ -20,7 +20,7 @@ export function PaginaPais() {
 
   return (
     <>
-      <div className=" flex flex-col min-h-screen bg-[#fafafa] p-4 gap-6 font-sans text-black items-center">
+      <div className="theme-page flex min-h-screen flex-col items-center gap-6 p-4 font-sans">
         <Titulo titulo={pais} />
 
         <main className="gap-0">

@@ -8,6 +8,7 @@ import { useObtenerPaises } from "./hook/useObtenerPaises.js";
 import { useFiltroPais } from "./hook/useFiltroPais.js";
 import { BarraCarga } from "./components/BarraCarga.jsx";
 import { Boton } from "./components/Boton.jsx";
+import { ThemeButton } from "./components/ThemeButton.jsx";
 
 function App() {
   const [paises_data, setPaisesData] = useState([]);
@@ -21,12 +22,13 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-[#fafafa] p-4 gap-6 font-sans text-black items-center">
+      <div className="theme-page flex min-h-screen flex-col items-center gap-6 p-4 font-sans">
         <Titulo titulo="Dashboard de países" />
         <main className="w-full md:w-3/4 lg:w-4/5 flex flex-col gap-10 items-center">
           <header className="flex flex-row gap-6 w-full max-w-2xl items-center">
             <BarraBusqueda busqueda={busqueda} setBusqueda={setBusqueda} />
             <Dropdown_Region region={region} setRegion={setRegion} />
+            <ThemeButton />
           </header>
 
           {
