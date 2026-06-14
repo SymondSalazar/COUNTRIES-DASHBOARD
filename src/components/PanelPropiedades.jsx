@@ -24,7 +24,7 @@ export function PanelPropiedades({ children, activeTab, setTab }) {
 
                 aria-selected={isActive}
                 onClick={() => setTab(index)}
-                className={`shrink-0 px-4 py-2 md:px-6 text-sm md:text-base font-semibold focus:ring-2 focus:ring-yellow-300 focus:outline-0 transition-colors ${
+                className={`shrink-0 px-4 py-2 md:px-6 text-sm md:text-base font-semibold focus:ring-2 focus:outline-0 transition-colors ${
                   isActive
                     ? "theme-tab-active"
                     : "theme-tab-inactive"
