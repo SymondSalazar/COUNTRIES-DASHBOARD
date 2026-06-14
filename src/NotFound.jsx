@@ -6,7 +6,7 @@ import { Boton } from "./components/Boton.jsx";
 export function NotFound() {
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-[#fafafa] p-4 gap-6 font-sans text-black items-center">
+      <div className="theme-page flex min-h-screen flex-col items-center gap-6 p-4 font-sans">
         <Titulo titulo="404 - Página no encontrada" />
 
         <img src="https://midu.dev/images/this-is-fine-404.gif" alt="" />

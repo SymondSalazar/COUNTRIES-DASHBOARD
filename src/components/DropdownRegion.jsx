@@ -3,7 +3,7 @@ export function Dropdown_Region({ region, setRegion }) {
     <select
       value={region}
       onChange={(e) => setRegion(e.target.value)}
-      className="tmt-0.5 w-full h-8 border-2 border-black bg-white placeholder-black shadow-[4px_4px_0_0] shadow-black focus:ring-2  sm:text-sm"
+      className="theme-field tmt-0.5 h-8 w-full sm:text-sm focus:ring-2"
     >
       <option value="">Seleccionar region</option>
       <option value="Africa">Africa</option>

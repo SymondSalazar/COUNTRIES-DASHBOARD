@@ -3,11 +3,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 :root {
-  --fuente-principal: "Space Grotesque", sans-serif;
+  color-scheme: light;
+  --theme-page: #fafafa;
+  --theme-surface: #ffffff;
+  --theme-text: #111111;
+  --theme-border: #111111;
+  --theme-shadow: rgba(17, 17, 17, 1);
+  --theme-title-bg: #fde047;
+  --theme-title-text: #111111;
+  --theme-accent: #fde047;
+  --theme-accent-text: #111111;
+  --theme-tab-active-bg: #fde047;
+  --theme-tab-active-text: #111111;
+  --theme-hover: #111111;
+  --theme-hover-text: #ffffff;
+  --fuente-principal: "Space Grotesk", sans-serif;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --theme-page: #0f172a;
+  --theme-surface: #1e293b;
+  --theme-text: #f8fafc;
+  --theme-border: #e2e8f0;
+  --theme-shadow: rgba(248, 250, 252, 0.35);
+  --theme-title-bg: #1e293b;
+  --theme-title-text: #f8fafc;
+  --theme-accent: #f59e0b;
+  --theme-accent-text: #f8fafc;
+  --theme-tab-active-bg: #334155;
+  --theme-tab-active-text: #f8fafc;
+  --theme-hover: #f8fafc;
+  --theme-hover-text: #0f172a;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
   font-family: var(--fuente-principal);
+  background: var(--theme-page);
+  color: var(--theme-text);
 }
 
 button,
@@ -15,4 +54,46 @@ input,
 select,
 textarea {
   font-family: inherit;
+}
+
+.theme-page {
+  background: var(--theme-page);
+  color: var(--theme-text);
+}
+
+.theme-title {
+  background: var(--theme-title-bg);
+  color: var(--theme-title-text);
+  border-color: var(--theme-border);
+  box-shadow: 4px 4px 0 0 var(--theme-shadow);
+}
+
+.theme-field,
+.theme-button,
+.theme-card {
+  background: var(--theme-surface);
+  color: var(--theme-text);
+  border-color: var(--theme-border);
+  box-shadow: 4px 4px 0 0 var(--theme-shadow);
+}
+
+.theme-button:hover,
+.theme-tab-inactive:hover {
+  background: var(--theme-hover);
+  color: var(--theme-hover-text);
+}
+
+.theme-tab-active {
+  background: var(--theme-tab-active-bg);
+  color: var(--theme-tab-active-text);
+  border-color: var(--theme-border);
+}
+
+.theme-tab-inactive {
+  color: var(--theme-text);
+  border-color: transparent;
+}
+
+.theme-progress {
+  background: var(--theme-text);
 }

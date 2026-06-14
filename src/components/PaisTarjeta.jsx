@@ -4,18 +4,23 @@ export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
   return (
     <Link
       to={`/pais/${nombre}`}
-      className="group relative block h-64 sm:h-80 lg:h-80 shadow-[4px_4px_0_0] shadow-black focus:outline-none"
+
+      className="theme-card group relative block h-64 sm:h-80 lg:h-80 focus:outline-none"
       style={{ WebkitTouchCallout: "none", userSelect: "none" }}
     >
-      <span className="absolute inset-0 border-2 border-dashed border-black"></span>
+      <span
+        className="absolute inset-0 border-2 border-dashed"
+        style={{ borderColor: "var(--theme-border)" }}
+      ></span>
 
-      <div className="relative flex h-full transform items-end border-2 border-black bg-white transition-all duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 group-active:-translate-x-2 group-active:-translate-y-2 group-focus:-translate-x-2 group-focus:-translate-y-2">
+
+      <div className="theme-field relative flex h-full transform items-end border-2  transition-all duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 group-active:-translate-x-2 group-active:-translate-y-2 group-focus:-translate-x-2 group-focus:-translate-y-2">
         <div className="px-4 pb-4 transition-opacity duration-300 group-hover:absolute group-hover:opacity-0 group-active:absolute group-active:opacity-0 group-focus:absolute group-focus:opacity-0 sm:px-6 sm:pb-4 lg:px-8 lg:pb-8">
           {bandera ? (
             <img
               src={bandera}
               alt={`Bandera de ${nombre}`}
-              className="mb-4 h-20 w-auto object-contain shadow-[4px_4px_0px_0px_rgba(0,0,0,0.1)]"
+              className="mb-4 h-20 w-auto object-contain shadow-[4px_4px_0px_0px_var(--theme-shadow)]"
             />
           ) : null}
 
