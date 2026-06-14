@@ -34,7 +34,7 @@ export function PanelPropiedades({ children, activeTab, setTab }) {
           })}
         </div>
       </div>
-      <div className="-mt-0.5 border-2 border-black p-4 md:p-6 shadow-[4px_4px_0_0] shadow-black bg-white">
+      <div className="-mt-0.5 w-full max-w-full overflow-x-auto break-words border-2 border-black p-4 md:p-6 shadow-[4px_4px_0_0] shadow-black bg-white">
         {children}
       </div>
     </div>
