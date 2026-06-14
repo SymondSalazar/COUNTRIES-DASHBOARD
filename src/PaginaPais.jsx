@@ -23,7 +23,7 @@ export function PaginaPais() {
       <div className=" flex flex-col min-h-screen bg-[#fafafa] p-4 gap-6 font-sans text-black items-center">
         <Titulo titulo={pais} />
 
-        <main className="gap-0">
+        <main className="gap-0 w-full max-w-3xl flex flex-col items-center">
           {pais_data.length > 0 && (
             <>
             <PanelPropiedades activeTab={activeTab} setTab={setTab}>
