@@ -1,17 +1,21 @@
 import { Link } from "react-router-dom";
+
 export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
   return (
     <Link
       to={`/pais/${nombre}`}
-      className="theme-card group relative block h-64 sm:h-80 lg:h-80"
+
+      className="theme-card group relative block h-64 sm:h-80 lg:h-80 focus:outline-none"
+      style={{ WebkitTouchCallout: "none", userSelect: "none" }}
     >
       <span
         className="absolute inset-0 border-2 border-dashed"
         style={{ borderColor: "var(--theme-border)" }}
       ></span>
 
-      <div className="theme-field relative flex h-full transform items-end border-2 transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
-        <div className="px-4 pb-4 transition-opacity group-hover:absolute group-hover:opacity-0 sm:px-6 sm:pb-4 lg:px-8 lg:pb-8">
+
+      <div className="theme-field relative flex h-full transform items-end border-2  transition-all duration-300 group-hover:-translate-x-2 group-hover:-translate-y-2 group-active:-translate-x-2 group-active:-translate-y-2 group-focus:-translate-x-2 group-focus:-translate-y-2">
+        <div className="px-4 pb-4 transition-opacity duration-300 group-hover:absolute group-hover:opacity-0 group-active:absolute group-active:opacity-0 group-focus:absolute group-focus:opacity-0 sm:px-6 sm:pb-4 lg:px-8 lg:pb-8">
           {bandera ? (
             <img
               src={bandera}
@@ -23,11 +27,10 @@ export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
           <h2 className="mt-4 text-xl font-medium sm:text-2xl">{nombre}</h2>
         </div>
 
-        <div className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
+        <div className="absolute p-4 opacity-0 transition-opacity duration-300 group-hover:relative group-hover:opacity-100 group-active:relative group-active:opacity-100 group-focus:relative group-focus:opacity-100 sm:p-6 lg:p-8">
           <h3 className="mt-4 text-xl font-medium sm:text-2xl">{nombre}</h3>
 
           <p className="mt-4 text-sm sm:text-base">Capital: {capital}</p>
-
           <p className="mt-2 text-sm sm:text-base">Poblacion: {poblacion}</p>
           <p className="mt-2 text-sm sm:text-base">Region: {region}</p>
         </div>
