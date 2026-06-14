@@ -1,4 +1,4 @@
-port { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
   return (
