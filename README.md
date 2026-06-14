@@ -37,7 +37,7 @@ npm run dev
 npm start
 
 # Abrir en el navegador
-# http://localhost:5173 (Vite) o http://localhost:3000 (CRA)
+# http://localhost:5173 (Vite) 
 ```
 
 ---
@@ -62,16 +62,16 @@ npm start
 | Filtro por Región | ✅  | |
 | Vista Detallada del País | ✅ | |
 | Estados de Carga | ✅| No se si es lo que se pide, pero muestra cuanto se carga |
-| Manejo de Errores | ⏳ |Muestra mensajes cuando no encuentra el pais|
+| Manejo de Errores | ✅ ❌ |Muestra mensajes cuando no encuentra el pais|
 
 ### Características Extra
 
 | Característica | Estado | Notas |
 |----------------|--------|-------|
 | Diseño Responsivo | ✅  | |
-| Modo Oscuro/Claro | ❌| |
+| Modo Oscuro/Claro | ✅ | |
 | Funcionalidad de Ordenamiento | ❌ | |
-| Favoritos (localStorage) |❌ | |
+| Favoritos (localStorage) |❌ ✅  | Uso el localStorage para el modo oscuro-claro |
 | TypeScript |  ❌ | |
 | Pruebas Unitarias | ❌ | |
 | Despliegue en Vivo | ✅  | |
@@ -117,11 +117,14 @@ src/
 │   ├── PaisTarjeta.jsx
 │   ├── PanelPropiedades.jsx
 │   ├── TabInfo.jsx
+│   ├── ThemeButton.jsx
+│   ├── ThemeSync.jsx
 │   └── Titulo.jsx
 │   
 │       
 ├── hooks/
 │   ├── useFiltroPais.js
+│   ├── useTheme.jsx
 │   └── useObtenerPaises.js
 ├── App.jsx
 ├── NotFound.jsx
