@@ -17,8 +17,8 @@
 | Tipo de Enlace | URL |
 |----------------|-----|
 | Repositorio de GitHub | [https://github.com/SymondSalazar/COUNTRIES-DASHBOARD] |
-| Video de Loom | [https://www.loom.com/share/...] |
-| Demo en Vivo (si está desplegado) | 
+| Video de Loom | [https://drive.google.com/file/d/1iDgMCUX0sCDUIA9ZBGxxf_Vs9p8hF703/view?usp=sharing] |
+| Demo en Vivo  |[https://countries-dashboard-ten.vercel.app/]| 
 ---
 
 ## Instrucciones de Configuración
