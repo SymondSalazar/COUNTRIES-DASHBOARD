@@ -22,7 +22,9 @@ export function Pais_Tarjeta({ nombre, bandera, poblacion, region, capital }) {
               alt={`Bandera de ${nombre}`}
               className="mb-4 h-20 w-auto object-contain shadow-[4px_4px_0px_0px_var(--theme-shadow)]"
             />
-          ) : null}
+          ) : (
+            <p>Bandera no disponible</p>
+          )}
 
           <h2 className="mt-4 text-xl font-medium sm:text-2xl">{nombre}</h2>
         </div>

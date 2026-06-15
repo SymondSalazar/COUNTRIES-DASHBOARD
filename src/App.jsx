@@ -15,9 +15,15 @@ function App() {
   const [busqueda, setBusqueda] = useState("");
   const [porcentaje, setPorcentaje] = useState(0);
   const [region, setRegion] = useState("");
-  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const loading = porcentaje < 100;
 
-  useObtenerPaises({ setPaisesData, pais: null, setLoading, setPorcentaje });
+  useObtenerPaises({
+    setPaisesData,
+    pais: null,
+    setPorcentaje,
+    setError,
+  });
   const filtro = useFiltroPais({ busqueda, region, paises_data });
 
   return (
@@ -31,14 +37,15 @@ function App() {
             <ThemeButton />
           </header>
 
-          {
-            loading && (
-              <div className="w-full flex justify-center items-center">
-                <BarraCarga porcentaje={porcentaje} />
-              </div>)
-          }
+          {error ? (
+            <p className="w-full text-center text-red-600">{error}</p>
+          ) : loading ? (
+            <div className="w-full flex justify-center items-center">
+              <BarraCarga porcentaje={porcentaje} />
+            </div>
+          ) : null}
           <section className="w-full">
-            <Paises paises_mostrar={filtro} loading={loading} />
+            <Paises paises_mostrar={filtro} loading={loading} error={error} />
           </section>
         </main>
       </div>

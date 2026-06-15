@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Titulo } from "./components/Titulo.jsx";
 import { Boton } from "./components/Boton.jsx";
 import { useParams } from "react-router-dom";
@@ -13,10 +13,16 @@ export function PaginaPais() {
 
   const [pais_data, setPaisesData] = useState([]);
   const [activeTab, setTab] = useState(0);
-  const [loading, setLoading] = useState(true);
   const [porcentaje, setPorcentaje] = useState(0);
+  const [error, setError] = useState(null);
+  const loading = porcentaje < 100;
 
-  useObtenerPaises({ setPaisesData, pais, setLoading, setPorcentaje });
+  useObtenerPaises({
+    setPaisesData,
+    pais,
+    setPorcentaje,
+    setError,
+  });
 
   return (
     <>
@@ -24,21 +30,23 @@ export function PaginaPais() {
         <Titulo titulo={pais} />
 
         <main className="gap-0 w-full max-w-3xl flex flex-col items-center">
-          {pais_data.length > 0 && (
+          {error ? (
+            <p className="text-center text-red-600">{error}</p>
+          ) : pais_data.length > 0 ? (
             <>
-            <PanelPropiedades activeTab={activeTab} setTab={setTab}>
-              <TAB_INFO activeTab={activeTab} pais_data={pais_data} />
-            </PanelPropiedades>
+              <PanelPropiedades activeTab={activeTab} setTab={setTab}>
+                <TAB_INFO activeTab={activeTab} pais_data={pais_data} />
+              </PanelPropiedades>
             </>
-          )}
+          ) : null}
 
-          {loading && (
+          {!error && loading && (
             <div className="w-full flex justify-center items-center">
               <BarraCarga porcentaje={porcentaje} />
             </div>
-            )}
+          )}
 
-          {pais_data.length === 0 && !loading && (
+          {!error && pais_data.length === 0 && !loading && (
             <p>No se encontró información sobre este país</p>
           )}
 

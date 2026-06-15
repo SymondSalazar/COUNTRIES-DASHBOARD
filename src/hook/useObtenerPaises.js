@@ -3,13 +3,11 @@ import { useEffect } from "react";
 const API_KEY = import.meta.env.VITE_API_KEY;
 const END_POINT = "api/v5?limit=100";
 
-function fetching() {}
-
 export function useObtenerPaises({
   setPaisesData,
   pais = null,
-  setLoading,
   setPorcentaje,
+  setError,
 }) {
   let ROUTE = END_POINT;
 
@@ -23,7 +21,13 @@ export function useObtenerPaises({
         Authorization: `Bearer ${API_KEY}`,
       },
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("No se pudo cargar la API");
+        }
+
+        return response.json();
+      })
       .then((data) => {
         setPaisesData((prev) => {
           const unidos = [...prev, ...(data.data.objects ?? [])];
@@ -39,8 +43,8 @@ export function useObtenerPaises({
   };
 
   useEffect(() => {
-    setLoading(true);
     setPorcentaje?.(10);
+    setError?.(null);
 
     const routes = [
       END_POINT,
@@ -49,17 +53,23 @@ export function useObtenerPaises({
     ];
 
     if (!pais) {
-      Promise.all(routes.map((route) => fetching(route))).finally(() => {
-        setLoading(false);
-        setPorcentaje?.(100);
-      });
+      Promise.all(routes.map((route) => fetching(route)))
+        .catch(() => {
+          setError?.("No se pudo cargar la API. Intenta nuevamente.");
+        })
+        .finally(() => {
+          setPorcentaje?.(100);
+        });
     } else {
-      fetching(ROUTE).finally(() => {
-        setLoading(false);
-        setPorcentaje?.(100);
-      });
+      fetching(ROUTE)
+        .catch(() => {
+          setError?.("No se pudo cargar la API. Intenta nuevamente.");
+        })
+        .finally(() => {
+          setPorcentaje?.(100);
+        });
     }
-  }, [ROUTE, setLoading, setPaisesData, setPorcentaje]);
+  }, [ROUTE, pais, setError, setPaisesData, setPorcentaje]);
 }
 
 export default useObtenerPaises;
