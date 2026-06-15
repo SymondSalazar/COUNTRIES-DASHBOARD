@@ -62,7 +62,7 @@ npm start
 | Filtro por Región | ✅  | |
 | Vista Detallada del País | ✅ | |
 | Estados de Carga | ✅| No se si es lo que se pide, pero muestra cuanto se carga |
-| Manejo de Errores | ✅ ❌ |Muestra mensajes cuando no encuentra el pais|
+| Manejo de Errores | ✅ |El unico error posible es la conexion a la Api|
 
 ### Características Extra
 
