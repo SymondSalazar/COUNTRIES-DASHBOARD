@@ -43,7 +43,11 @@ export function Vista_Paises_Backup({ paises_mostrar }) {
   ));
 }
 
-export function Paises({ paises_mostrar, loading }) {
+export function Paises({ paises_mostrar, loading, error }) {
+  if (error) {
+    return null;
+  }
+
   if (paises_mostrar.length != 0 && !loading) {
     return <Vista_Paises paises_mostrar={paises_mostrar} />;
   } else if (loading) {
