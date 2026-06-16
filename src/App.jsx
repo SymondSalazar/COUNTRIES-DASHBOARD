@@ -9,6 +9,7 @@ import { useFiltroPais } from "./hook/useFiltroPais.js";
 import { BarraCarga } from "./components/BarraCarga.jsx";
 import { Boton } from "./components/Boton.jsx";
 import { ThemeButton } from "./components/ThemeButton.jsx";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [paises_data, setPaisesData] = useState([]);
@@ -49,6 +50,7 @@ function App() {
           </section>
         </main>
       </div>
+      <Analytics />
     </>
   );
 }
